@@ -356,4 +356,7 @@ p {
 .bodyContent {
   flex-grow: 1;
   background-color: #fff;
+}
+.bodyContent h1 {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

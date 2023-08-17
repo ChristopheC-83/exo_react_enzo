@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 
 
-function Body() {
+function Body({children}) {
   return (
     <div className="bodyContent">
-        <h2>Corps de la SPA</h2>
+        {children}
       
     </div>
   )
