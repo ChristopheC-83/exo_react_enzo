@@ -1,0 +1,25 @@
+@import "libs/variables";
+@import "libs/reset";
+@import "libs/mixins";
+@import "libs/polices";
+@import "communs/header_menu";
+@import "communs/footer";
+@import "communs/formulaire";
+@import "communs/overlay";
+
+.APP {
+  background-color: #f1f1f1;
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  // max-width: 1440px;
+  margin: 0 auto;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.bodyContent {
+  flex-grow: 1;
+  background-color: #fff;
+}
