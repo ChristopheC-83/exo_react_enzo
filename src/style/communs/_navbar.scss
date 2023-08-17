@@ -1,0 +1,79 @@
+.navbar {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contentNavbar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-around;
+  
+    a {
+      font-size: clamp(16px, calc(14px + 0.6vw), 22px);
+      letter-spacing: calc(1px + 0.02vw);
+      color: $noir;
+      font-weight: bold;
+    }
+  }
+  .hamburgerNavbar {
+    width: 100px;
+    height: 100px;
+    @include flexMid;
+    font-size: 50px;
+    display: none;
+  }
+  
+  .sousligné{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    animation : boom 0.5s 0.5s 2 linear
+  }
+  
+  @keyframes boom {
+    0%{
+      transform: scale(1);
+    }
+    25%{
+      transform: scale(1.25);
+    }
+    50%{
+      transform: scale(1.5);
+    }
+    75%{
+      transform: scale(1.25);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .navbar {
+      flex-direction: column;
+      align-items: end;
+      height: min-content;
+      transition: all 1s;
+  
+      .contentNavbar {
+        flex-direction: column;
+        width: 100%;
+        transition: all 1s;
+        height: fit-content;
+  
+        a {
+          margin: 10px 0;
+        }
+      }
+      .contentNavbarHidden {
+        display: none;
+      }
+    }
+    .hamburgerNavbar {
+      display: flex;
+    }
+  }
+  

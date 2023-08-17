@@ -6,6 +6,19 @@
 @import "communs/footer";
 @import "communs/formulaire";
 @import "communs/overlay";
+@import "communs/navbar";
+@import "pages/audio";
+@import "pages/boxy";
+@import "pages/commerce";
+@import "pages/geodata";
+@import "pages/ide";
+@import "pages/meteo";
+@import "pages/notes";
+@import "pages/pomodoro";
+@import "pages/scroll";
+@import "pages/slider";
+@import "pages/accueil";
+@import "pages/notfound";
 
 .APP {
   background-color: #f1f1f1;
@@ -22,7 +35,7 @@
 .bodyContent {
   flex-grow: 1;
   background-color: #fff;
-  h1{
+  h1 {
     text-align: center;
   }
 }

@@ -16,10 +16,16 @@ function Navbar() {
         className={`${!showMenu ? "" : "contentNavbarHidden"} contentNavbar`}
       >
         <NavLink to="/" className={({isActive})=>`${isActive && "sousligné"}`}>Accueil</NavLink>
-        <NavLink to="/services" className={({isActive})=>`${isActive && "sousligné"}`}>Services</NavLink>
-        <NavLink to="/tarifs" className={({isActive})=>`${isActive && "sousligné"}`}>Tarifs</NavLink>
-        <NavLink to="/contact" className={({isActive})=>`${isActive && "sousligné"}`}>Contact</NavLink>
-        <NavLink to="/profil" className={({isActive})=>`${isActive && "sousligné"}`}>Profil</NavLink>
+        <NavLink to="/boxy" className={({isActive})=>`${isActive && "sousligné"}`}>Boxy</NavLink>
+        <NavLink to="/slider" className={({isActive})=>`${isActive && "sousligné"}`}>Slider</NavLink>
+        <NavLink to="/meteo" className={({isActive})=>`${isActive && "sousligné"}`}>Meteo</NavLink>
+        <NavLink to="/geodata" className={({isActive})=>`${isActive && "sousligné"}`}>Geodata</NavLink>
+        <NavLink to="/ide" className={({isActive})=>`${isActive && "sousligné"}`}>IDE</NavLink>
+        <NavLink to="/pomodoro" className={({isActive})=>`${isActive && "sousligné"}`}>Pomodoro</NavLink>
+        <NavLink to="/audio" className={({isActive})=>`${isActive && "sousligné"}`}>Audio</NavLink>
+        <NavLink to="/scroll" className={({isActive})=>`${isActive && "sousligné"}`}>Scroll</NavLink>
+        <NavLink to="/commerce" className={({isActive})=>`${isActive && "sousligné"}`}>Commerce</NavLink>
+        <NavLink to="/notes" className={({isActive})=>`${isActive && "sousligné"}`}>Notes</NavLink>
       </div>
     </div>
   );
