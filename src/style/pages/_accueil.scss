@@ -1,0 +1,13 @@
+.boxLink {
+  width: clamp(200px, 30vw, 300px);
+  height: clamp(150px, 22.5vw, 225px);
+  border: 1px solid $noir;
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px $noir;;
+}
+
+.boxLinkContainer{
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+}
