@@ -7,6 +7,7 @@ import { addShadow } from "../../../../features/boxy/shadows";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import ShadowRange from "./ShadowRange";
 import ShadowColorPicker from "./ShadowColorPicker";
+import ShadowCheckBox from "./ShadowCheckBox"
 
 function Shadow({ panelNumber, shadow }) {
   const [toggleShadow, setToggleShadow] = useState(false);
@@ -50,8 +51,8 @@ function Shadow({ panelNumber, shadow }) {
         <>
           <div className="upToggleShadow">
             <div className="checkboxShadow">
-              {/* <Checkbox/>
-            <Checkbox/> */}
+             <ShadowCheckBox name="active" shadowID={shadow.id}/>
+             <ShadowCheckBox name="inset" shadowID={shadow.id}/>
             </div>
             <div className="spacerShadow"></div>
             <button className="btnAddShadow" style={{ backgroundColor: "red" }}>

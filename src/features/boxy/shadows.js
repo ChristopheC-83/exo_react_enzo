@@ -31,15 +31,15 @@ const initialState = [
       },
       {
         inputNumber: 4,
-        name: "Spread Radius",
+        name: "Spread Offset",
         value: 0,
         type: "range",
-        minMax: [0, 250],
+        minMax: [-250, 250],
       },
       {
         inputNumber: 5,
         name: "Color",
-        value: "#000000",
+        value: "#b9b9b9",
         type: "color",
       },
     ],
@@ -88,14 +88,29 @@ export const shadowSlice = createSlice({
           {
             inputNumber: 5,
             name: "Color",
-            value: "#000000",
+            value: "#b9b9b9",
             type: "color",
           },
         ],
       });
     },
-    updateShadowValue: (state, action) => {},
-    updateShadowCheckBox: (state, action) => {},
+    updateShadowValue: (state, action) => {
+      const currentShadow = state.find(
+        (shadow) => shadow.id === action.payload.shadowID
+      );
+
+      const currentInput = currentShadow.inputs.find(
+        (input) => input.inputNumber === action.payload.inputNumber
+      );
+
+      currentInput.value = action.payload.value;
+    },
+    updateShadowCheckBox: (state, action) => {
+      const currentShadow = state.find(
+        (shadow) => shadow.id === action.payload.shadowID
+      );
+      currentShadow[action.payload.name] = !currentShadow[action.payload.name];
+    },
   },
 });
 

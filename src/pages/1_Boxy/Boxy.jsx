@@ -4,6 +4,7 @@ import { useState } from "react"
 import LeftContainer from "./layouts/LeftContainer"
 import ShadowList from "./layouts/ShadowList/ShadowList"
 import BoxPanel from "./layouts/BoxPanel/BoxPanel"
+import Vizualisation from "./layouts/Vizualisation/Vizualisation"
 
 function Boxy() {
 
@@ -18,10 +19,12 @@ function Boxy() {
 
 
   return (
-    <div className="boxy">
+    <>
       <h1>Boxy</h1>
+    <div className="boxy">
       <LeftContainer/>
-    </div>
+      <Vizualisation/>
+    </div></>
   )
 }
 
