@@ -11,7 +11,8 @@
   width: 40vw;
   height: 35vw;
   min-width: 300px;
-  min-height: 250px;
+  height: fit-content;
+  min-height: 400px;
   border: 1px solid #33333375;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -19,7 +20,9 @@
   position: relative;
   margin-top: 60px;
   @include flexMid;
+  align-items: start;
   box-shadow: 0px 10px 20px $noir;
+  padding-bottom: 10px;
 }
 
 .tabs {
@@ -150,14 +153,76 @@
         border: none;
       }
     }
-    input[type="color"]{
-        border:none;
-        outline:none;
-        padding: 0;
-        width: 10%;
-        height: 45px;
-        background-color: transparent;
-        cursor: pointer;
+    input[type="color"] {
+      border: none;
+      outline: none;
+      padding: 0;
+      width: 10%;
+      height: 45px;
+      background-color: transparent;
+      cursor: pointer;
     }
   }
+}
+.titleButtonShadowList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $noir;
+  padding: 10px 0 20px;
+
+  p {
+    font-size: clamp(16px, calc(14px + 0.6vw), 22px);
+    letter-spacing: calc(1px + 0.02vw);
+    font-weight: bold;
+  }
+
+  .btnAddShadow {
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: $noir;
+    color: $blanc;
+    box-shadow: 1px 1px 5px $noir;
+    transition: all 0.33s;
+    &:hover {
+      background-color: $blanc;
+      color: $noir;
+    }
+  }
+}
+
+.listShadow {
+  padding: 0;
+  h4 {
+    margin: 10px 0;
+    font-weight: normal;
+  }
+}
+.shadow {
+  width: 100%;
+  height: fit-content;
+}
+
+.btnShadowItem {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+}
+
+.upToggleShadow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  .checkboxShadow {
+  }
+  .spacerShadow {
+    flex-grow: 1;
+  }
+  
 }

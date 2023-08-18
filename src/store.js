@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { configureStore } from "@reduxjs/toolkit";
-import shadow from "./features/boxy/shadow";
+import shadows from "./features/boxy/shadows";
 import boxProps from "./features/boxy/boxProps";
 
 export const store = configureStore({
   reducer: {
-    shadow,
+    shadows,
     boxProps,
   },
 });
