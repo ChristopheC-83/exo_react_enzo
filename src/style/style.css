@@ -552,6 +552,7 @@ p {
 .square {
   position: fixed;
   top: 35%;
+  right: 10%;
   width: 250px;
   height: 250px;
   border: 1px solid rgba(51, 51, 51, 0.3137254902);
@@ -563,6 +564,7 @@ p {
 .modalBtn {
   position: fixed;
   top: 25%;
+  right: 15%;
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #333;
