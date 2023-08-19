@@ -8,8 +8,11 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import ShadowRange from "./ShadowRange";
 import ShadowColorPicker from "./ShadowColorPicker";
 import ShadowCheckBox from "./ShadowCheckBox"
+import { removeShadow } from "../../../../features/boxy/shadows";
 
 function Shadow({ panelNumber, shadow }) {
+
+  const dispatch = useDispatch()
   const [toggleShadow, setToggleShadow] = useState(false);
 
   useEffect(() => {
@@ -55,7 +58,11 @@ function Shadow({ panelNumber, shadow }) {
              <ShadowCheckBox name="inset" shadowID={shadow.id}/>
             </div>
             <div className="spacerShadow"></div>
-            <button className="btnAddShadow" style={{ backgroundColor: "red" }}>
+            <button
+            onClick = {()=>dispatch(removeShadow(shadow.id))}
+             className="btnAddShadow"
+              style={{ backgroundColor: "red" }}
+              >
               Remove
             </button>
           </div>

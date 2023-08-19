@@ -20,6 +20,9 @@
 @import "pages/accueil";
 @import "pages/notfound";
 
+html{
+position: relative;  // pour overlay recouvre toute l'application
+}
 .APP {
   background-color: #f1f1f1;
   color: #fff;

@@ -50,7 +50,12 @@ export const shadowSlice = createSlice({
   name: "shadows",
   initialState,
   reducers: {
-    removeShadow: (state, action) => {},
+    removeShadow: (state, action) => {
+      const shadowIndexToRemove = state.findIndex(shadow=>shadow.id===action.payload)
+      state.splice(shadowIndexToRemove, 1)  // à partir de cet index, on enlève 1 élément
+      
+    
+    },
     addShadow: (state, action) => {
       state.push({
         id: nanoid(8),
