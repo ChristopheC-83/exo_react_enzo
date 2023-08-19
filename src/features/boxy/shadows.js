@@ -92,7 +92,8 @@ export const shadowSlice = createSlice({
             type: "color",
           },
         ],
-      });
+      },
+      );
     },
     updateShadowValue: (state, action) => {
       const currentShadow = state.find(

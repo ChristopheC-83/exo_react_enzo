@@ -26,6 +26,7 @@
   align-items: start;
   box-shadow: 0px 10px 20px $noir;
   padding-bottom: 10px;
+  z-index: 10;
 }
 
 .tabs {
@@ -249,7 +250,7 @@
 }
 .square {
   position: fixed;
-  top: 50%;
+  top: 35%;
   // left: 50%;
   // transform: translate(-50%, -50%);
   width: 250px;
@@ -257,16 +258,18 @@
   border: 1px solid #33333350;
   border-radius: 15px;
   background-color: $blanc;
+  z-index: 0;
 }
 .modalBtn {
   position: fixed;
-  top:40%;
+  top:25%;
   padding: 5px 10px;
   border-radius: 5px;
   background-color: $noir;
   box-shadow: 1px 1px 5px $noir;
   transition: all 0.33s;
   cursor: pointer;
+  z-index: 2;
   p {
     color: $blanc;
   }
