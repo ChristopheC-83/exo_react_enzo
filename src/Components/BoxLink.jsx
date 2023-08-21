@@ -1,11 +1,10 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { NavLink } from "react-router-dom";
 
-function BoxLink() {
+function BoxLink({content}) {
   return (
-    <div className="boxLink">
-      <h1>BOXY</h1>
-    </div>
+      <NavLink to={content.link}  className="boxLink">{content.name}</NavLink>
   );
 }
 

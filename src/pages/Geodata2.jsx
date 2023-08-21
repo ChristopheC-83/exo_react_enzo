@@ -1,20 +1,21 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 //https://restcountries.com/v3.1/region/europe
 
 import { useState, useEffect } from "react";
-import Loaders from "../../Components/Loaders";
-import ListCard from "./ListCard";
+import Loaders from "../Components/Loaders";
+import ListCard from "./4_Geodata/ListCard";
 
-function Geodata() {
-  const [countries, setCountries] = useState({
+function donnéesApi() {
+  const [infos, setInfos] = useState({
     loading: false,
     error: false,
     data: undefined,
   });
 
   useEffect(() => {
-    setCountries({ ...countries, loading: true });
+    setInfos({ ...infos, loading: true });
     fetch("https://restcountries.com/v3.1/region/europe")
       .then((response) => {
         if (!response.ok) throw new Error("Erreur : mauvaise ressource.");
@@ -32,30 +33,29 @@ function Geodata() {
             return 0;
           }
         });
-        setCountries({ loading: false, error: false, data: data });
+        setInfos({ loading: false, error: false, data: data });
         return;
       })
       .catch((e) => {
-        console.log(e);
-        setCountries({ loading: false, error: true, data: undefined });
+        setInfos({ loading: false, error: true, data: undefined });
       });
   }, []);
 
   let content;
 
-  if (countries.loading) {
+  if (infos.loading) {
     content = (
       <div className="loader">
         <Loaders />
       </div>
     );
-  } else if (countries.error) {
+  } else if (infos.error) {
     content = <p>Une erreur est survenue !</p>;
-  } else if (countries.data?.length > 0) {
+  } else if (infos.data?.length > 0) {
     content = (
       <ul className="countriesList">
-        {countries.data.map((country, index) => (
-          <ListCard key={index} country={country} />
+        {infos.data.map((info, index) => (
+          <ListCard key={index} country={info} />
         ))}
       </ul>
       
@@ -63,11 +63,11 @@ function Geodata() {
   }
 
   return (
-    <div className="geodata">
-      <h1>Europe Countries Data</h1>
+    <div className="infosContainer">
+      <h1>Les infos</h1>
       {content}
     </div>
   );
 }
 
-export default Geodata;
+export default donnéesApi;
