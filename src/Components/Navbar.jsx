@@ -5,7 +5,11 @@ import { FaChevronDown } from "react-icons/fa6";
 import { FaChevronUp } from "react-icons/fa6";
 
 function Navbar() {
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
+
+function hideMenu(){
+  setShowMenu(false)
+}
 
   return (
     <div className="navbar">
@@ -13,7 +17,8 @@ function Navbar() {
         {showMenu ? <FaChevronDown /> : <FaChevronUp />}
       </div>
       <div
-        className={`${!showMenu ? "" : "contentNavbarHidden"} contentNavbar`}
+        className={`${showMenu ? "" : "contentNavbarHidden"} contentNavbar`}
+        onClick={hideMenu}
       >
         <NavLink to="/" className={({isActive})=>`${isActive && "sousligné"}`}>Accueil</NavLink>
         <NavLink to="/boxy" className={({isActive})=>`${isActive && "sousligné"}`}>Boxy</NavLink>

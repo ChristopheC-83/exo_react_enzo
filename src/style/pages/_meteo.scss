@@ -1,0 +1,50 @@
+.meteo {
+  width: 80%;
+  height: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  color: $noir;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-meteo {
+  text-align: center;
+  width: 375px;
+  min-height: 380px;
+  margin: 100px auto;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 1px 1px 20px 1px $noir;
+  background-color: #02e8f036;
+}
+
+.city-name {
+  font-size: 40px;
+  font-weight: bold;
+}
+.country-name {
+  font-size: 25px;
+  color: #606060;
+  margin-bottom: 60px;
+}
+
+.temperature {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 30px;
+}
+
+.info-icon {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.error-information {
+  margin-bottom: 20px;
+}

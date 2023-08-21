@@ -1,0 +1,40 @@
+.loader {
+  width: 100px;
+  height: 100px;
+  color: $noir;
+  position: relative;
+  z-index: 10;
+}
+.spinner {
+  position: absolute;
+  font-size: 25px;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner1 {
+  color: red;
+  filter:drop-shadow(2px 2px 2px red);
+  animation: rotationSpinner1 3.5s infinite linear;
+}
+
+@keyframes rotationSpinner1 {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.spinner2 {
+  font-size: 70px;
+  color: noir;
+  filter:drop-shadow(2px 2px 2px black);
+  animation: rotationSpinner2 2.5s infinite linear;
+}
+
+@keyframes rotationSpinner2 {
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
