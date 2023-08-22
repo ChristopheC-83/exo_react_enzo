@@ -2,10 +2,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import shadows from "./features/boxy/shadows";
 import boxProps from "./features/boxy/boxProps";
+import codeUpdater from "./features/ide/sideBar";
 
 export const store = configureStore({
   reducer: {
     shadows,
     boxProps,
+    codeUpdater,
   },
 });
