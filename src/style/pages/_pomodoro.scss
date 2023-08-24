@@ -1,0 +1,101 @@
+.pomodoro {
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    font-family: "Roboto Condensed", sans-serif;
+    color: $noir;
+    text-shadow: 1px 1px 4px $noir;
+  }
+
+  .pomodoro-container {
+    width: 90%;
+    margin: 0 auto;
+    height: 500px;
+    max-width: 600px;
+    border: 3px solid $noir;
+    border-radius: 20px;
+    box-shadow: 2px 2px 40px 2px $noir;
+    background-color: #1190ca;
+    padding: 30px;
+    margin-top: 80px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    color: $blanc;
+    margin: 0;
+  }
+  p {
+    font-size: 20px;
+  }
+  .boxes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    p {
+      margin: 10px 20px;
+    }
+  }
+
+  .btnsBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .btnBox {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    background-color: $blanc;
+    color: $noir;
+    @include flexMid;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    span {
+      margin-top: 4px;
+    }
+  }
+  .workBox {
+    width: 100%;
+    @include flexMid;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .timeLeft {
+    padding: 15px 25px;
+    background-color: $blanc;
+    font-size: 40px;
+    margin-top: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .btnWork {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    font-weight: bold;
+    @include flexMid;
+    justify-content: space-around;
+    cursor: pointer;
+    svg {
+        transform: scale(1.4);
+    }
+  }
+}

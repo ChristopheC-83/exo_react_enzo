@@ -27,9 +27,9 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     button {
-      width: 200px;
+      width: fit-content;
       padding: 10px 20px;
       border-radius: 5px;
       color: $blanc;
@@ -43,6 +43,9 @@
       &:hover {
         background-color: #0951b1;
         color: white;
+      }
+      span {
+        margin-left: 10px;
       }
     }
   }
@@ -70,18 +73,18 @@
   flex-direction: column;
   padding: 10px;
   padding-top: 20px;
-  gap: 20px;
-  button{
+  button {
     background-color: $noir;
-    color:$blanc;
-    border:none;
+    color: $blanc;
+    border: none;
     cursor: pointer;
-}
+  }
 }
 .workspace {
   flex-grow: 2;
   width: 100%;
   min-height: 60vh;
+  position: relative;
 }
 .text-zone {
   color: $blanc;
@@ -93,5 +96,43 @@
   padding: 5px;
   font-size: 18px;
   font-weight: normal;
-  line-height: 25px; 
+  line-height: 25px;
+}
+
+.btn-ide-sideBar {
+  width: 150px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px 25px;
+  transition: all 0.33s;
+  border-radius: 10px;
+
+  span {
+    font-size: 18px;
+  }
+
+  img {
+    width: 30px;
+    margin-right: 10px;
+  }
+  &:hover {
+    background-color: #555;
+  }
+}
+.preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $noir;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+  }
 }

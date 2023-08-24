@@ -1,11 +1,13 @@
 import BoxLink from "../Components/BoxLink";
 
+
 function Accueil() {
   const content = [
     { name: "Boxy", link: "/boxy" },
     { name: "Slider", link: "/slider" },
     { name: "GeoData", link: "/geodata" },
     { name: "IDE", link: "/ide" },
+    { name: "Pomodoro", link: "/pomodoro" },
   ];
 
   return (
@@ -16,6 +18,7 @@ function Accueil() {
           <BoxLink key={index} content={each} />
         ))}
       </div>
+      
     </div>
   );
 }

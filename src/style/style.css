@@ -833,10 +833,11 @@ p {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
 }
 .ide-menu .btn button {
-  width: 200px;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 10px 20px;
   border-radius: 5px;
   color: #f1f1f1;
@@ -851,6 +852,9 @@ p {
 .ide-menu .btn button:hover {
   background-color: #0951b1;
   color: white;
+}
+.ide-menu .btn button span {
+  margin-left: 10px;
 }
 .ide-menu .ide-hamb {
   width: 100%;
@@ -876,7 +880,6 @@ p {
   flex-direction: column;
   padding: 10px;
   padding-top: 20px;
-  gap: 20px;
 }
 .sidebar button {
   background-color: #333;
@@ -889,6 +892,7 @@ p {
   flex-grow: 2;
   width: 100%;
   min-height: 60vh;
+  position: relative;
 }
 
 .text-zone {
@@ -902,6 +906,42 @@ p {
   font-size: 18px;
   font-weight: normal;
   line-height: 25px;
+}
+
+.btn-ide-sideBar {
+  width: 150px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px 25px;
+  transition: all 0.33s;
+  border-radius: 10px;
+}
+.btn-ide-sideBar span {
+  font-size: 18px;
+}
+.btn-ide-sideBar img {
+  width: 30px;
+  margin-right: 10px;
+}
+.btn-ide-sideBar:hover {
+  background-color: #555;
+}
+
+.preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+.preview iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
 }
 
 .meteo {
@@ -955,6 +995,110 @@ p {
 
 .error-information {
   margin-bottom: 20px;
+}
+
+.pomodoro h1,
+.pomodoro h2,
+.pomodoro h3,
+.pomodoro h4,
+.pomodoro p {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #333;
+  text-shadow: 1px 1px 4px #333;
+}
+.pomodoro .pomodoro-container {
+  width: 90%;
+  margin: 0 auto;
+  height: 500px;
+  max-width: 600px;
+  border: 3px solid #333;
+  border-radius: 20px;
+  box-shadow: 2px 2px 40px 2px #333;
+  background-color: #1190ca;
+  padding: 30px;
+  margin-top: 80px;
+}
+.pomodoro h1,
+.pomodoro h2,
+.pomodoro h3,
+.pomodoro h4,
+.pomodoro p {
+  color: #f1f1f1;
+  margin: 0;
+}
+.pomodoro p {
+  font-size: 20px;
+}
+.pomodoro .boxes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+.pomodoro .box {
+  display: flex;
+  flex-direction: column;
+}
+.pomodoro .box p {
+  margin: 10px 20px;
+}
+.pomodoro .btnsBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pomodoro .btnBox {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  background-color: #f1f1f1;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.pomodoro .btnBox span {
+  margin-top: 4px;
+}
+.pomodoro .workBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.pomodoro .timeLeft {
+  padding: 15px 25px;
+  background-color: #f1f1f1;
+  font-size: 40px;
+  margin-top: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.pomodoro .btnWork {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-top: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.pomodoro .btnWork svg {
+  transform: scale(1.4);
 }
 
 .slider {

@@ -4,7 +4,7 @@ import { HiDotsVertical } from "react-icons/hi";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
 import SideBar from "./Components/SideBar";
-import WorkSpace from "./Components/WorkSpace";
+import PreviewButton from "./Components/PreviewButton";
 
 function Ide() {
   return (
@@ -14,9 +14,7 @@ function Ide() {
           the <b>SmartIDE</b>
         </h1>
         <div className="btn">
-          <button>
-            <AiOutlineEye /> Preview
-          </button>
+        <PreviewButton/>
         </div>
         <div className="ide-hamb">
           <HiDotsVertical />
@@ -24,9 +22,7 @@ function Ide() {
       </div>
       <div className="ide-work">
         <SideBar />
-        <div className="workspace">
-          <WorkSpace />
-        </div>
+        
       </div>
     </div>
   );
