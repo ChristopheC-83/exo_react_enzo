@@ -1,13 +1,15 @@
 /* eslint-disable no-unused-vars */
 
 import UpdateTimeButton from "./components/UpdateTimeButton";
-import { FaMinus } from "react-icons/fa6";
-import { FaPlus } from "react-icons/fa6";
 import { GrPowerReset } from "react-icons/gr";
 import { BsPlay } from "react-icons/bs";
 import ToggleButton from "./components/ToggleButton";
+import { useDispatch, useSelector } from "react-redux";
+import getFormatedValue from "../../utils/pomodoro/getFormatedValue";
 
 function Pomodoro() {
+  const chronoValues = useSelector((state) => state.pomodoro);
+
   return (
     <div className="pomodoro">
       <div className="pomodoro-container">
@@ -16,26 +18,32 @@ function Pomodoro() {
           <div className="box">
             <p>Sessions</p>
             <div className="btnsBox">
-              <UpdateTimeButton sign={<FaMinus />} type={"session"} />
-              <p>25</p>
-              <UpdateTimeButton sign={<FaPlus />} type={"session"} />
+              <UpdateTimeButton sign="-" type={"session"} />
+              <p>{chronoValues.session.value / 60}</p>
+              <UpdateTimeButton sign="+" type={"session"} />
             </div>
           </div>
           <div className="box">
             <p>Pauses</p>
             <div className="btnsBox">
-              <UpdateTimeButton sign={<FaMinus />} type={"pauses"} />
-              <p>5</p>
-              <UpdateTimeButton sign={<FaPlus />} type={"pauses"} />
+              <UpdateTimeButton sign="-" type={"pause"} />
+              <p>{chronoValues.pause.value / 60}</p>
+              <UpdateTimeButton sign="+" type={"pause"} />
             </div>
           </div>
         </div>
         <div className="workBox">
-          <h2>Work</h2>
+          <h2>
+            {chronoValues.displayedValue.heading
+              ? chronoValues.displayedValue.heading
+              : "..."}
+          </h2>
           <p className="timeLeft" style={{ color: "#333" }}>
-            25:00
+            {getFormatedValue(chronoValues.displayedValue.value)}
           </p>
-          <p>Passed cycle(s) : 0</p>
+          <p>
+            Passed cycle(s) :{chronoValues.cycles ? chronoValues.cycles : 0}
+          </p>
           <ToggleButton />
         </div>
       </div>

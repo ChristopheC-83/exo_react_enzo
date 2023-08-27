@@ -4,6 +4,7 @@ import shadows from "./features/boxy/shadows";
 import boxProps from "./features/boxy/boxProps";
 import codeUpdater from "./features/ide/sideBar";
 import preview from "./features/ide/preview";
+import pomodoro from "./features/pomodoro/pomodoro";
 
 export const store = configureStore({
   reducer: {
@@ -11,5 +12,6 @@ export const store = configureStore({
     boxProps,
     codeUpdater,
     preview,
+    pomodoro
   },
 });
